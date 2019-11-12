@@ -1,14 +1,21 @@
 #include<stdio.h>
-
 int main()
 {
-    unsigned int a=1;
-    unsigned int b=0;
-    unsigned int c=0-1;
-    while (a!=0){
-        a=a<<1;
-        b=b+1;
+    int count=0;
+    char number2;
+    int number3 = 0;
+    int i = 0;
+    printf("please input the number\n");
+    while((number2 = getchar()) !='\n'){
+        number3 =number3*10+(number2 -'0');
     }
-    printf("a=%u\n",c);
-    printf("%d",b);
+    while(number3 !=0){
+        i = number3 - (number3/2)*2;
+        number3 = number3/2;
+        if(i==1){
+            count++;
+        }
+        }
+        printf("the amount is:%d\n",count);
+        return 0;
 }
